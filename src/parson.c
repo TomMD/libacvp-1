@@ -1600,7 +1600,7 @@ JSON_Status json_serialize_to_file(const JSON_Value *value, const char *filename
 }
 
 char * json_serialize_to_string(const JSON_Value *value, int *len) {
-    JSON_Status serialization_result = JSONFailure;
+    JSON_Status serialization_result;
     size_t buf_size_bytes = json_serialization_size(value);
     char *buf = NULL;
     if (buf_size_bytes == 0) {
