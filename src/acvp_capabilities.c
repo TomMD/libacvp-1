@@ -67,7 +67,6 @@ static ACVP_DSA_CAP *allocate_dsa_cap(void) {
     // Allocate the array of dsa_mode
     modes = calloc(ACVP_DSA_MAX_MODES, sizeof(ACVP_DSA_CAP_MODE));
     if (!modes) {
-        free(cap);
         return NULL;
     }
     cap->dsa_cap_mode = modes;
